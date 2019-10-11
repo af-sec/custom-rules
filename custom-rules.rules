@@ -1,0 +1,2 @@
+pass http $HOME_NET any -> $EXTERNAL_NET any (msg:"pass all aliyun.com host request"; content:"aliyun.com"; http_host; classtype:not-suspicious; sid:10000001; rev:1; metadata:created_at 2019_10_11, updated_at 2019_11_11;)
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"alert host request ceshiwangzhan.com"; content:"ceshiwangzhan.com"; http_host; classtype:not-suspicious; sid:10000002; rev:1; metadata:created_at 2019_10_11, updated_at 2019_11_11;)
